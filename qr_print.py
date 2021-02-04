@@ -5,7 +5,7 @@ import os
 import re
 
 
-print("\nТекущая ссылка: http://url.ru/check/\n")
+print("\nТекущая ссылка: http://nic-innovations.ru/check/\n")
 
 while True:
     try:
@@ -24,9 +24,9 @@ while True:
 n = 0
 
 def qrc(site, pat):
-    site = site[0: -5]
+    site = site.replace(' ', '')
     filename = pat + '/' + site + '.png'
-    site = 'http://url.ru/check/' + site
+    site = 'http://nic-innovations.ru/check/' + site
     img = qrcode.make(site)
     img.save(filename)
 
